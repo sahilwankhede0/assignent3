@@ -1,9 +1,20 @@
-read -p "enter the power n : " n
-i=1
-table =1
-while((i<=n))
+read -p "enter the numberr base : " base
+read -p "enteer the exponent " exponent
+power=1
+expo=exponent
+while((expo<0))
 do
-table=$((2*i))
- table=$((i++))
-echo "2 to the power" $i" =" $table
+    power=$((power/base))
+    expo=$((expo++))
+
 done
+if$((exponent>0))
+then
+     for$((i=1; i<=exponent; i++))
+   do
+        power=$((power*base))
+        echo     $base "to the power" $erponent "=" $power
+   done
+   break
+fi
+
